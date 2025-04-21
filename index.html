@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tek-Lingua Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceWorker.js');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.jpeg" alt="Tek-Lingua Logo" />
+    </div>
+    <h2>Welcome, Student!</h2>
+    <div class="info">
+      <label for="classSelect">Select Class (5 to 12):</label>
+      <select id="classSelect">
+        <option>Select Class</option>
+        <option>Class 5</option>
+        <option>Class 6</option>
+        <option>Class 7</option>
+        <option>Class 8</option>
+        <option>Class 9</option>
+        <option>Class 10</option>
+        <option>Class 11</option>
+        <option>Class 12</option>
+      </select>
+
+      <label for="courseSelect">Select Computer Course:</label>
+      <select id="courseSelect">
+        <option>Select Course</option>
+        <option>DCA</option>
+        <option>ADCA</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>Java</option>
+        <option>Python</option>
+        <option>HTML</option>
+        <option>Networking</option>
+        <option>Web Development</option>
+        <option>Application Development</option>
+        <option>PGDCA</option>
+        <option>ERP Projects</option>
+      </select>
+    </div>
+
+    <div class="nav">
+      <a href="#notes">Notes</a>
+      <a href="#homework">Homework</a>
+      <a href="#syllabus">Syllabus</a>
+      <a href="#videos">Video Classes</a>
+    </div>
+
+    <div class="section" id="notes">
+      <h3>Notes</h3>
+      <div class="note-item"><a href="#">Light - Chapter Notes (PDF)</a></div>
+      <div class="note-item"><a href="#">Electricity - Full Chapter Summary</a></div>
+      <div class="note-item"><a href="#">Acids, Bases & Salts - Formula Sheet</a></div>
+    </div>
+
+    <div class="section" id="homework">
+      <h3>Homework Upload</h3>
+      <form class="homework-form">
+        <input type="file" name="homework" accept=".pdf,.jpg,.png,.docx" required />
+        <input type="submit" value="Upload Homework" onclick="alert('Demo: Homework Submitted!')" />
+      </form>
+    </div>
+
+    <div class="section" id="videos">
+      <h3>Recorded Video Classes</h3>
+      <div class="video-item">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Light - Reflection & Refraction</a>
+      </div>
+      <div class="video-item">
+        <a href="https://www.youtube.com/watch?v=xyz123" target="_blank">Electricity - Concepts & Numericals</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
